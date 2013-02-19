@@ -1,3 +1,12 @@
 = MongoidRailsInstrumentation
 
-This project rocks and uses MIT-LICENSE.
+Adds additional information to rails logs about total time for MongoDB queries in action processing. Just add gem "mongoid-rails-instrumentation" to your Gemfile.
+
+= Example Output
+Started GET "/" for x.x.x.x at 2013-02-19 09:06:25 +0100
+Processing by PagesController#show as HTML
+  Parameters: {"path"=>"/"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4668ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 60ms (Views: 14.2ms)
+Mongo: (6.4668ms) | Query count: 1
